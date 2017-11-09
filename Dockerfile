@@ -12,3 +12,5 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get install -q -yy ceph-common && \
     apt-get autoremove -y && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+LABEL maintainer="ja.lauricella@gmail.com"
