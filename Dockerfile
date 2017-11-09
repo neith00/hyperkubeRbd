@@ -1,8 +1,5 @@
-ARG CEPH_CODENAME=luminous
-ARG HYPERKUBE_VERSION=1.8.2
- 
-FROM quay.io/coreos/hyperkube:v${HYPERKUBE_VERSION}_coreos.0
-ARG CEPH_CODENAME
+FROM quay.io/coreos/hyperkube:v1.8.2_coreos.0
+ENV CEPH_CODENAME=luminous
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update -y && \
     apt-get install -q -yy curl lsb-release && \
