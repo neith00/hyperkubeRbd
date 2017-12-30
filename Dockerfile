@@ -1,4 +1,4 @@
-FROM quay.io/coreos/hyperkube:v1.8.2_coreos.0
+FROM quay.io/coreos/hyperkube:v1.9.0_coreos.0
 ENV CEPH_CODENAME=luminous
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update -y && \
