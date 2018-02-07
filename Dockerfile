@@ -2,7 +2,7 @@ FROM quay.io/coreos/hyperkube:v1.9.1_coreos.0
 ENV CEPH_CODENAME=luminous
 RUN export DEBIAN_FRONTEND=noninteractive && \
     apt-get update -y && \
-    apt-get install -q -yy curl lsb-release && \
+    apt-get install -q -yy curl lsb-release gnupg && \
     curl https://raw.githubusercontent.com/ceph/ceph/master/keys/release.asc | apt-key add - && \
     echo deb http://download.ceph.com/debian-${CEPH_CODENAME}/ $(lsb_release --codename --short) main | tee /etc/apt/sources.list.d/ceph.list && \
     apt-get update -y && \ 
